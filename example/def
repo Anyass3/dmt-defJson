@@ -1,0 +1,42 @@
+pushover:
+
+  app: foo
+
+    token: a8@kog2np8viz4jmm17ev93tmosp89k
+
+    group: red
+
+      token: g1xf961e396afdto1u3nqi6cxb63mv
+
+    group: blue
+
+      token: gcxf961e396afdto1u3nqi6cxb63mw
+
+  app: boo
+
+    token: a8#kog2np8viz4jmm17ev93tmosp89k
+
+    group: red
+
+      token: g1xf961e396afdto1u3nqi6cxb63mv
+
+        id: hmm
+
+    group: blue
+
+      token: gcxf961e396afdto1u3nqi6cxb63mw
+
+pushhere:
+
+  app: foo#fghjh
+
+    token: a8!kog2np8viz4jmm17ev93tmosp89k
+
+    group: red
+
+      token: g1xf961e396afdto1u3nqi6cxb63mv
+
+    group: blue
+
+      token: gcxf961e396afdto1u3nqi6cxb63mw
+
