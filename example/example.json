@@ -37,25 +37,5 @@
                 }
             ]
         }
-    ],
-    "pushhere": [
-        {
-            "app": [
-                {
-                    "__name__": "foo#fghjh",
-                    "token": "a8!kog2np8viz4jmm17ev93tmosp89k",
-                    "group": [
-                        {
-                            "__name__": "blue",
-                            "token": "gcxf961e396afdto1u3nqi6cxb63mw"
-                        },
-                        {
-                            "__name__": "red",
-                            "token": "g1xf961e396afdto1u3nqi6cxb63mv"
-                        }
-                    ]
-                }
-            ]
-        }
     ]
 }
