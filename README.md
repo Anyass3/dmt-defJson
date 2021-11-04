@@ -13,3 +13,13 @@
 ```
  node example/json2def.js
 ```
+
+### Additionaly
+
+```bash
+node --experimental-modules --experimental-specifier-resolution=node ~/.dmt/core/node/common/cli/parseDef.js example/example.def
+```
+
+### Def format specification and motivation
+
+[See here](https://github.com/dmtsys/def)
