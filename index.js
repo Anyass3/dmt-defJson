@@ -54,7 +54,7 @@ const _json2def = (_json, space = '') => {
 };
 const def2json = (def) => {
   def = def
-    .replace(/(^|\s)#.*/g, '')
+    .replace(/#.*/g, '')
     .split('\n')
     .filter((i) => i && !/^\s*$/.exec(i))
     .map((i) => i.trimEnd());
