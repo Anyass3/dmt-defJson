@@ -18,7 +18,7 @@ const _def2json = (def) => {
     let json = {};
     if (sliced?.length) {
       if (item.length === 2) {
-        json[item[0]] = [{ __name__: item[1], ..._def2json(sliced) }];
+        json[item[0]] = [{ id: item[1], ..._def2json(sliced) }];
       } else {
         json[item[0]] = [_def2json(sliced)];
       }
@@ -36,17 +36,14 @@ const _def2json = (def) => {
 };
 
 const _json2def = (_json, space = '') => {
-  const { __name__, ...json } = _json;
+  const { id, ...json } = _json;
   return Object.keys(json).reduce((prevs, key) => {
     const __def__ = space + key + ': ';
     if (typeof json[key] === 'string') return prevs + __def__ + json[key] + '\n\n';
     else {
       return json[key].reduceRight(
         (prev, item) =>
-          prev +
-          (__def__ + (item.__name__ || '')).trimEnd() +
-          '\n\n' +
-          _json2def(item, space + '  '),
+          prev + (__def__ + (item.id || '')).trimEnd() + '\n\n' + _json2def(item, space + '  '),
         prevs
       );
     }

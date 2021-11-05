@@ -3,34 +3,29 @@
         {
             "app": [
                 {
-                    "__name__": "boo",
+                    "id": "boo",
                     "token": "a81kog2np8viz4jmm17ev93tmosp89k",
                     "group": [
                         {
-                            "__name__": "blue",
+                            "id": "blue",
                             "token": "gcxf961e396afdto1u3nqi6cxb63mw"
                         },
                         {
-                            "__name__": "red",
-                            "token": [
-                                {
-                                    "__name__": "g1xf961e396afdto1u3nqi6cxb63mv",
-                                    "id": "hmm"
-                                }
-                            ]
+                            "id": "red",
+                            "token": "g1xf961e396afdto1u3nqi6cxb63mv"
                         }
                     ]
                 },
                 {
-                    "__name__": "foo",
+                    "id": "foo",
                     "token": "a8@kog2np8viz4jmm17ev93tmosp89k",
                     "group": [
                         {
-                            "__name__": "blue",
+                            "id": "blue",
                             "token": "gcxf961e396afdto1u3nqi6cxb63mw"
                         },
                         {
-                            "__name__": "red",
+                            "id": "red",
                             "token": "g1xf961e396afdto1u3nqi6cxb63mv"
                         }
                     ]
