@@ -43,13 +43,12 @@ const _json2def = (_json, space = '') => {
   return Object.keys(json).reduce((prevs, key) => {
     const __def__ = space + key + ': ';
     if (typeof json[key] === 'string') return prevs + __def__ + json[key] + '\n\n';
-    else {
-      return json[key].reduceRight(
+    else
+      return (Array.isArray(json[key]) ? json[key] : [json[key]]).reduce(
         (prev, item) =>
           prev + (__def__ + (item.id || '')).trimEnd() + '\n\n' + _json2def(item, space + '  '),
         prevs
       );
-    }
   }, '');
 };
 const def2json = (def) => {
