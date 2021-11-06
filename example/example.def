@@ -1,7 +1,7 @@
 pushover:
 
-  app: foo
-
+  app:
+    id: foo
     token: a8@kog2np8viz4jmm17ev93tmosp89k
 
     group: red
