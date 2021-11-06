@@ -18,12 +18,9 @@ const _def2json = (def) => {
     let json = {};
     if (sliced?.length) {
       if (item.length === 2) {
-        json[item[0]] = [{ id: item[1], ..._def2json(sliced) }];
+        json[item[0]] = { id: item[1], ..._def2json(sliced) };
       } else {
-        json[item[0]] = [_def2json(sliced)];
-      }
-      if (json[item[0]].length === 1) {
-        json[item[0]] = json[item[0]][0];
+        json[item[0]] = _def2json(sliced);
       }
     } else if (item.length === 2) {
       json[item[0]] = item[1];
@@ -32,12 +29,8 @@ const _def2json = (def) => {
       let obj;
       if (subprev?.[key]) {
         let value;
-        if (Array.isArray(subprev[key])) {
-          if (Array.isArray(json[key])) value = subprev[key].concat(json[key]);
-          else value = subprev[key].concat([json[key]]);
-        } else {
-          value = [subprev[key], json[key]];
-        }
+        if (Array.isArray(subprev[key])) value = subprev[key].concat([json[key]]);
+        else value = [subprev[key], json[key]];
         obj = { [key]: value };
       } else obj = { [key]: json[key] };
       return { ...subprev, ...obj };
