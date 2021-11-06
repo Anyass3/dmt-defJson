@@ -22,13 +22,23 @@ const _def2json = (def) => {
       } else {
         json[item[0]] = [_def2json(sliced)];
       }
+      if (json[item[0]].length === 1) {
+        json[item[0]] = json[item[0]][0];
+      }
     } else if (item.length === 2) {
       json[item[0]] = item[1];
     }
     return Object.keys(json).reduce((subprev, key) => {
       let obj;
       if (subprev?.[key]) {
-        obj = { [key]: json[key].concat(subprev[key]) };
+        let value;
+        if (Array.isArray(subprev[key])) {
+          if (Array.isArray(json[key])) value = subprev[key].concat(json[key]);
+          else value = subprev[key].concat([json[key]]);
+        } else {
+          value = [subprev[key], json[key]];
+        }
+        obj = { [key]: value };
       } else obj = { [key]: json[key] };
       return { ...subprev, ...obj };
     }, prev);
